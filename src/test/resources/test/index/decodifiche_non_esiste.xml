@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Elenco di test in cui alcune vanno in errore</comment>
+<entry key="2">docs/Decodifiche/2_dec_non_esiste.csv</entry> <!-- non esiste -->
+</properties>
