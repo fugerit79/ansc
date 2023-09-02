@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.fugerit.dist</groupId>
+	<groupId>org.fugerit.fork.italia</groupId>
 	<artifactId>ansc</artifactId>
 
 	<parent>
@@ -12,7 +12,7 @@
 		<relativePath></relativePath>
 	</parent>
 
-	<version>1.11.4-SNAPSHOT</version>
+	<version>1.11.4-rc.1</version>
 	<packaging>jar</packaging>
 
 	<name>ansc</name>
@@ -28,12 +28,71 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>11</maven.compiler.release>
-		<build-helper-maven-plugin-version>3.4.0</build-helper-maven-plugin-version>        
+		<build-helper-maven-plugin-version>3.4.0</build-helper-maven-plugin-version> 
+		<fj-version>8.2.3</fj-version>       
+		<fj-test-helper-version>0.3.1</fj-test-helper-version>
+		<opencsv-version>5.8</opencsv-version>    	
 	    <!-- sonar cloud configuration -->
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.organization>fugerit79</sonar.organization>
 	</properties>
 
+	<dependencies>
+		
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-core</artifactId>
+			<version>${fj-version}</version>			
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.opencsv</groupId>
+		    <artifactId>opencsv</artifactId>
+		    <version>${opencsv-version}</version>
+		</dependency>		
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>	
+
+		<dependency> 
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-api</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-slf4j2-impl</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.fugerit.java</groupId>
+			<artifactId>fj-test-helper8</artifactId>
+			<version>${fj-test-helper-version}</version>
+			<scope>test</scope>
+		</dependency>			
+			
+	</dependencies>
+	
 	<build>
 		
 		<plugins>
@@ -53,11 +112,11 @@
 							<resources>
 								<resource>
 									<directory>docs</directory>
-									<targetPath>docs</targetPath>
+									<targetPath>italia/ansc/docs</targetPath>
 									<includes>
 										<include>**/*.csv</include>
 									</includes>
-								</resource>						
+								</resource>
 							</resources>
 						</configuration>
 					</execution>
@@ -102,5 +161,91 @@
 		<url>https://github.com/fugerit79</url>
 		<name>fugerit79</name>
 	</organization>
+	
+	<profiles>
+	
+		<profile>
+			<id>singlepackage</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.apache.logging.log4j</groupId>
+				    <artifactId>log4j-api</artifactId>
+				</dependency>
+				<dependency>
+				    <groupId>org.apache.logging.log4j</groupId>
+				    <artifactId>log4j-core</artifactId>
+				</dependency>
+				<dependency>
+					<groupId>org.apache.logging.log4j</groupId>
+				    <artifactId>log4j-slf4j2-impl</artifactId>
+				</dependency>
+			</dependencies>		
+			<build>
+				<plugins>
+					<plugin>
+		                <groupId>org.codehaus.mojo</groupId>
+		                <artifactId>build-helper-maven-plugin</artifactId>
+		                <version>${build-helper-maven-plugin-version}</version>
+						<executions>
+							<execution>
+								<id>add-resource</id>
+								<phase>generate-resources</phase>
+								<goals>
+									<goal>add-resource</goal>
+								</goals>
+								<configuration>
+									<resources>
+										<resource>
+											<directory>${project.basedir}/docs</directory>
+											<targetPath>italia/ansc/docs</targetPath>
+											<includes>
+												<include>**/*.csv</include>
+											</includes>
+										</resource>
+										<resource>
+											<directory>${project.basedir}/src/main/tool/</directory>
+											<targetPath>.</targetPath>
+											<includes>
+												<include>log4j2.xml</include>
+												<include>banner.txt</include>
+											</includes>											
+										</resource>										
+									</resources>
+								</configuration>
+							</execution>
+						</executions>
+		            </plugin>							
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jar-plugin</artifactId>
+						<configuration>
+							<archive>
+								<manifest>
+									<addClasspath>true</addClasspath>
+									<mainClass>org.fugerit.fork.italia.ansc.tool.AnscTool</mainClass>
+								</manifest>
+							</archive>
+						</configuration>
+					</plugin>				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-shade-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>shade</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<finalName>dist-${project.artifactId}-${project.version}</finalName>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>	
+	
+	</profiles>	
 	
 </project>
