@@ -2,7 +2,7 @@
 
 [![Changelog v1.0.0 badge](https://img.shields.io/badge/changelog-Keep%20a%20Changelog%20v1.1.0-%23E05735)](CHANGELOG.md) 
 [![license](https://img.shields.io/badge/License-CC%20BY%204.0-teal.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Maven Central](https://img.shields.io/maven-central/v/org.fugerit.fork.italia/ansc.svg)](https://mvnrepository.com/artifact/org.fugerit.fork.italia/ansc)
+[![Maven Central](https://img.shields.io/maven-central/v/org.fugerit.java.fork/ansc.svg)](https://mvnrepository.com/artifact/org.fugerit.java.fork/ansc)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fugerit79_ansc&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=fugerit79_ansc)
 
 ## Introduzione
@@ -34,7 +34,7 @@ Per usare il progetto basta aggiungere la dipendenza :
 
 ```
 		<dependency>
-			<groupId>org.fugerit.fork.italia</groupId>
+			<groupId>org.fugerit.java.fork</groupId>
 			<artifactId>ansc</artifactId>
 			<version>${ansc-version}</version>			
 		</dependency>
