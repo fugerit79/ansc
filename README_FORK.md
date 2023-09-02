@@ -34,7 +34,7 @@ Per usare il progetto basta aggiungere la dipendenza :
 
 ```
 		<dependency>
-			<groupId>org.fugerit.fork.italia</groupId>
+			<groupId>org.fugerit.fork.fork.italia</groupId>
 			<artifactId>ansc</artifactId>
 			<version>${ansc-version}</version>			
 		</dependency>
