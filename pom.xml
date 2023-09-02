@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.fugerit.dist</groupId>
+	<artifactId>ansc</artifactId>
+
+	<parent>
+		<groupId>org.fugerit.java</groupId>
+		<artifactId>fj-bom</artifactId>
+		<version>1.3.1</version>
+		<relativePath></relativePath>
+	</parent>
+
+	<version>1.11.4-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>ansc</name>
+	<description>Versione distribuibile come progetto maven del repository github italia/ansc</description>
+	<url>https://github.com/fugerit79/ansc</url>
+
+	<scm>
+		<connection>scm:git:git://github.com/fugerit79/ansc.git</connection>
+		<developerConnection>scm:git:ssh://github.com/fugerit79/ansc.git</developerConnection>
+		<url>https://github.com/fugerit79/ansc.git</url>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.release>11</maven.compiler.release>
+		<build-helper-maven-plugin-version>3.4.0</build-helper-maven-plugin-version>        
+	    <!-- sonar cloud configuration -->
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.organization>fugerit79</sonar.organization>
+	</properties>
+
+	<build>
+		
+		<plugins>
+			
+			<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>${build-helper-maven-plugin-version}</version>
+				<executions>
+					<execution>
+						<id>add-resource</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>add-resource</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>docs</directory>
+									<targetPath>docs</targetPath>
+									<includes>
+										<include>**/*.csv</include>
+									</includes>
+								</resource>						
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+            </plugin>			
+			
+		</plugins>
+		
+	</build>
+
+	<licenses>
+		<license>
+			<name>Attribution 4.0 International (CC BY 4.0)</name>
+			<url>https://creativecommons.org/licenses/by/4.0/</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Matteo Franci</name>
+			<email>mttfranci@gmail.com</email>
+			<organization>mttfranci</organization>
+			<organizationUrl>https://github.com/mttfranci</organizationUrl>			
+		</developer>
+		<developer>
+			<name>Matteo a.k.a. Fugerit</name>
+			<email>m@fugerit.org</email>
+			<organization>Fugerit</organization>
+			<organizationUrl>https://www.fugerit.org</organizationUrl>
+		</developer>		
+	</developers>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<organization>
+		<url>https://github.com/fugerit79</url>
+		<name>fugerit79</name>
+	</organization>
+	
+</project>
