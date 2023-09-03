@@ -24,13 +24,19 @@ public class TestGenerateIndex extends BasicTest {
 
 	private static final String INPUT_DECODIFICHE = "docs/Decodifiche/";
 	
+	private static final String PREFIX_IN_CATALOG = INPUT_DECODIFICHE;
+	
 	private static final String OUTPUT_BASE = "src/main/resources";
 			
-	private static final String OUTPUT_DECODIFICHE = OUTPUT_BASE+"/italia/ansc/index/decodifiche.xml"; 
+	private static final String OUTPUT_DECODIFICHE = OUTPUT_BASE+"/italia/ansc/index/decodifiche.xml";
+	
+	private static final String INPUT_DECODIFICHE_ANPR = "src/main/resources/italia/anpr/docs/Decodifiche/";
+	
+	private static final String OUTPUT_DECODIFICHE_ANPR = OUTPUT_BASE+"/italia/anpr/index/decodifiche.xml"; 
 	
 	private boolean generateWorker( String input, String output, final Comparator<String> comp, Consumer<Properties> additionaProcessing ) {
 		boolean ok = false;
-		File fileInput = new File( INPUT_DECODIFICHE );
+		File fileInput = new File( input );
 		File fileOutput = new File( output );
 		try ( OutputStream os = new FileOutputStream( fileOutput ) ) {
 			log.info( "input -> {}, output -> {}", fileInput.getCanonicalPath(), fileOutput.getCanonicalPath() );
@@ -55,7 +61,7 @@ public class TestGenerateIndex extends BasicTest {
 				log.info( "current file {}", current.getCanonicalPath() );
 				String key = current.getName().replace( ".csv" , "" );
 				String value = current.getCanonicalPath().replace( "\\", "/" );	// per windows
-				int index = value.indexOf( input );
+				int index = value.indexOf( PREFIX_IN_CATALOG );
 				value = value.substring( index );	// il path nel jar
 				log.info( "set {} -> {}", key, value );
 				outputProps.setProperty(key, value);
@@ -70,9 +76,8 @@ public class TestGenerateIndex extends BasicTest {
 		return ok;
 	}
 	
-	@Test
-	public void generateIndexDecodifiche() {
-		boolean ok = this.generateWorker(INPUT_DECODIFICHE, OUTPUT_DECODIFICHE, 
+	private boolean generateIndexDecodificheHelper( String input, String output ) {
+		boolean ok = this.generateWorker( input, output, 
 				new Comparator<String>() {
 					private int helper( String key ) {
 						int result = 0;
@@ -104,6 +109,18 @@ public class TestGenerateIndex extends BasicTest {
 					}
 				}
 		);
+		return ok;
+	}
+	
+	@Test
+	public void generateIndexDecodificheAnsc() {
+		boolean ok = this.generateIndexDecodificheHelper(INPUT_DECODIFICHE, OUTPUT_DECODIFICHE);
+		Assert.assertTrue(ok);
+	}
+	
+	@Test
+	public void generateIndexDecodificheAnpr() {
+		boolean ok = this.generateIndexDecodificheHelper(INPUT_DECODIFICHE_ANPR, OUTPUT_DECODIFICHE_ANPR);
 		Assert.assertTrue(ok);
 	}
 	

@@ -1,0 +1,8 @@
+"ID";"DESCRIZIONE";"ORDINAMENTO";"DATAINIZIOVALIDITA";"DATAFINEVALIDITA"
+"8";"validazione non effettuata per comune di residenza non congruente";"0";"01-01-1900";"31-12-9999"
+"2";"Dati anagrafici validati ( soggetto presente in A.T. con  dati anagrafici uguali a quelli indicati dal Comune ma CF diverso)";"0";"01-01-1900";"31-12-9999"
+"3";"Dati anagrafici diversi (soggetto presente in A.T. con  dati anagrafici diversi da quelli indicati dal Comune - la differenza non produce un diverso codice fiscale)";"0";"01-01-1900";"31-12-9999"
+"4";"Posizione con  codice fiscale collegato  (più recente) (soggetto presente in A.T., individuato con il codice fiscale collegato)";"0";"01-01-1900";"31-12-9999"
+"5";"Posizione con  più omocodici collegati  (soggetto presente in A.T., ma non individuato con il codice fiscale omocodice)";"0";"01-01-1900";"31-12-9999"
+"9";"Posizione inesistente (soggetto NON presente in A.T.)";"0";"01-01-1900";"31-12-9999"
+"1";"Dati anagrafici validati ( soggetto presente in A.T. con  CF e dati anagrafici uguali a quelli indicati dal Comune)";"0";"01-01-1900";"31-12-9999"
