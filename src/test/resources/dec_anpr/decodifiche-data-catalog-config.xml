@@ -1,0 +1,62 @@
+<data-catalog-config 
+	type="test.org.fugerit.fork.italia.ansc.helper.ConvertAnprDecEntry">
+
+	<data-list id="tabelle-dec">
+		<data id="1" tabella="DEC_STATO_CIVILE" mode="DECODIFICA"/>
+		<data id="2" tabella="AMM_STATO" mode="DECODIFICA"/>
+		<data id="3" tabella="AMM_COMUNE" mode="DECODIFICA"/>
+		<data id="5" tabella="DEC_GRADO_PARENTELA" mode="DECODIFICA"/>
+		<data id="6" tabella="DEC_LEGAME_CONV" mode="DECODIFICA"/>
+		<data id="7" tabella="DEC_MOTIVO_ISCR_APR" mode="DECODIFICA"/>
+		<data id="8" tabella="DEC_TIPO_SOGGIORNO" mode="DECODIFICA"/>
+		<data id="9" tabella="DEC_POSIZIONE_PROFESSIONE" mode="DECODIFICA"/>
+		<data id="10" tabella="DEC_COND_NON_PROF" mode="DECODIFICA"/>
+		<data id="11" tabella="DEC_TITOLO_STUDIO" mode="DECODIFICA"/>
+		<data id="13" tabella="DEC_TIPO_CERTIFICATO" mode="DECODIFICA"/>
+		<data id="14" tabella="DEC_LINGUA" mode="DECODIFICA"/>
+		<data id="15" tabella="DEC_MOTIVO_ARCH_APR" mode="DECODIFICA"/>
+		<data id="16" tabella="DEC_GRUPPO_DATI" mode="DECODIFICA"/>
+		<data id="17" tabella="DEC_PROSPETTO_STATISTICO" mode="DECODIFICA"/>
+		<data id="18" tabella="DEC_DETTAGLIO_PROSPETTO" mode="DECODIFICA"/>
+		<data id="19" tabella="DEC_MOTIVO_ISCR_AIRE" mode="DECODIFICA"/>
+		<data id="20" tabella="DEC_INIZ_MOV_ANAGRAFICI" mode="DECODIFICA"/>
+		<data id="21" tabella="DEC_INDIVID_COMUNE_ISCR" mode="DECODIFICA"/>
+		<data id="22" tabella="DEC_STATO_CF" mode="DECODIFICA"/>
+		<data id="24" tabella="DEC_RANGO_CONSOLATO" mode="DECODIFICA"/>
+		<data id="26" tabella="DEC_MOTIVO_COST_FAMIGLIA" mode="DECODIFICA"/>		
+		<data id="27" tabella="DEC_SPECIE_CONV" mode="DECODIFICA"/>
+		<data id="28" tabella="DEC_MOTIVO_ARCH_AIRE" mode="DECODIFICA"/>
+		<data id="32" tabella="DEC_TIPO_TRIBUNALE" mode="DECODIFICA"/>
+		<data id="23" tabella="DEC_TIPO_MOVIMENTAZIONE" mode="DECODIFICA"/>
+		<data id="25" tabella="DEC_TIPO_INDIRIZZO" mode="DECODIFICA"/>
+		<data id="29" tabella="DEC_MOTIVO_INNESCO_PROC" mode="DECODIFICA"/>
+		<data id="30" tabella="DEC_STATO_PROCEDIMENTO" mode="DECODIFICA"/>
+		<data id="31" tabella="DEC_TIPO_FINE_UNIONE" mode="DECODIFICA"/>		
+		<data id="33" tabella="CONVERSIONE_CODICI_AIRE" mode="DECODIFICA"/>
+		<data id="36" tabella="DEC_TIPO_MUTAZIONE" mode="DECODIFICA"/>
+		<data id="38" tabella="DEC_TIPO_CITTADINANZA" mode="DECODIFICA"/>
+		<data id="39" tabella="DEC_MOTIVO_ESENZIONE_BOLLO" mode="DECODIFICA"/>
+		<data id="42" tabella="DEC_CERTIFICABILITA" mode="DECODIFICA"/>
+		<data id="43" tabella="DEC_TIPO_FINE_LEGAME" mode="DECODIFICA"/>
+		<data id="44" tabella="DEC_STATO_ELABORAZIONE" mode="DECODIFICA"/>
+		<data id="45" tabella="COMUNI_SUBENTRATI" mode="DECODIFICA"/>
+		<data id="46" tabella="DEC_TIPO_MUTAZIONE_FAM_CONV" mode="DECODIFICA"/>
+		<data id="47" tabella="DEC_TIPO_MUTAZIONE_RESIDENZA" mode="DECODIFICA"/>
+		<data id="48" tabella="DEC_TIPO_REVOCA" mode="DECODIFICA"/>
+		<data id="49" tabella="DEC_MOTIVO_REVOCA" mode="DECODIFICA"/>
+		<data id="50" tabella="DEC_TIPO_MUTAZ_AIRE" mode="DECODIFICA"/>
+		<data id="51" tabella="DEC_SC_FORMATOALLEGATO" mode="DECODIFICA"/>
+		<data id="52" tabella="DEC_SC_TIPOALLEGATO" mode="DECODIFICA"/>
+		<data id="53" tabella="DEC_SC_STATORICHIESTA" mode="DECODIFICA"/>
+		<data id="54" tabella="DEC_SC_TIPORICHIESTA" mode="DECODIFICA"/>
+		<data id="55" tabella="DEC_SC_TIPORECAPITO" mode="DECODIFICA"/>
+		<data id="56" tabella="DEC_SC_VAR_SEZIONE_DATO" mode="DECODIFICA"/>
+		<data id="57" tabella="DEC_SC_VAR_DATO_ANAGRAFICO" mode="DECODIFICA"/>
+		<data id="58" tabella="DEC_SC_STATO_RICHIESTA_CAMBIO_RESIDENZA" mode="DECODIFICA"/>
+		<data id="59" tabella="DEC_SC_TIPO_OCCUPAZIONE" mode="DECODIFICA"/>
+		<data id="60" tabella="DEC_SC_MOTIVI_IRRICEVIBILITA" mode="DECODIFICA"/>
+		<data id="61" tabella="DEC_TIPO_NOTIFICA" mode="DECODIFICA"/>
+		<data id="62" tabella="DEC_TIPO_NOTIFICA_ANSC" mode="DECODIFICA"/>
+	</data-list>
+
+</data-catalog-config>

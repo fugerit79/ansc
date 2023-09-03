@@ -13,9 +13,14 @@ Non verrà effettuata nessuna modifica alle risorse già esistenti, questo READM
 
 ```
 +--ansc-X.X.X.jar
-   +--docs/                       # contiene la documentazione esportata
-      +--Decodifiche/             # tutte le decodifiche in solo formato csv
-      +--Mapping_casi_uso/        # tutte i mapping casi d'uso in solo formato csv
+   +--italia/
+      +--ansc
+         +--docs/                       # contiene la documentazione esportata
+            +--Decodifiche/             # tutte le decodifiche di ansc in solo formato csv
+            +--Mapping_casi_uso/        # tutte i mapping casi d'uso in solo formato csv
+      +--anpr            
+         +--docs/      
+            +--Decodifiche/             # tutte le decodifiche di anpr in solo formato csv
 ```
 
 Attraverso la [DecodificheFacade](src/main/java/org/fugerit/fork/italia/ansc/decodifiche/DecodificheFacade.java) è possibile caricare il contenuto delle decodifiche, ecco un esempio : 

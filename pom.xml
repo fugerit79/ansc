@@ -12,7 +12,7 @@
 		<relativePath></relativePath>
 	</parent>
 
-	<version>1.11.4-rc.1</version>
+	<version>1.11.4-rc.2</version>
 	<packaging>jar</packaging>
 
 	<name>ansc</name>

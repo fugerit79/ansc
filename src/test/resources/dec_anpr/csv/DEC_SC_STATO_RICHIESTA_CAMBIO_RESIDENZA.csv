@@ -1,0 +1,14 @@
+"ID";"DESCRIZIONE";"ORDINAMENTO";"DATAINIZIOVALIDITA";"DATAFINEVALIDITA"
+"1";"Bozza";"0";;
+"2";"Aperta";"0";;
+"3";"In lavorazione";"0";;
+"4";"Annullata";"0";;
+"5";"Accolta Definitivamente";"0";;
+"6";"Sospesa";"0";;
+"7";"Integrata";"0";;
+"9";"Bozza in verifica";"0";;
+"10";"Sospesa in verifica";"0";;
+"11";"Irricevibile";"0";;
+"12";"Accolta Con Riserva";"0";;
+"13";"In Attesa di Convalida";"0";;
+"99";"Altro";"0";;
