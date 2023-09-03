@@ -7,6 +7,18 @@ e il progetto si conforma al [Versionamento semantico](https://semver.org/spec/v
 
 ## [Non rilasciato]
 
+## [1.11.4-rc.2] - 2023-09-03
+
+### Aggiunto
+
+- Accesso alle decodifiche di ANPR
+- Nuovo metodo di decodifiche facade per ottenere la modellazione completa del csv sottostante la decodifica.
+- Metodi e modelli specifici per comuni, province e stati di ANPR.
+
+### Fixed
+
+- Path nel readme corretti
+
 ## [1.11.4-rc.1] - 2023-09-02
 
 ### Aggiunto
