@@ -7,6 +7,16 @@ e il progetto si conforma al [Versionamento semantico](https://semver.org/spec/v
 
 ## [Non rilasciato]
 
+### Aggiunto
+
+- Aggiunte decodifiche 88 e 98 all'indice.
+
+### Modificato
+
+- version parent fj-bom impostata a 1.3.6
+- version fj-core impostata a 2.0.2
+- integrazione con tag v1.12.0 italia/ansc
+
 ## [1.11.4-rc.2] - 2023-09-03
 
 ### Aggiunto

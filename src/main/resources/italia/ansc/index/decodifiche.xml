@@ -61,12 +61,14 @@
 <entry key="76">docs/Decodifiche/76_dec_tipo_mutazione.csv</entry>
 <entry key="78">docs/Decodifiche/78_dec_accertamento_nascita.csv</entry>
 <entry key="79">docs/Decodifiche/79_dec_tipo_rettifica.csv</entry>
+<entry key="88">docs/Decodifiche/88_dec_genitore_cittadinanza.csv</entry>
 <entry key="91">docs/Decodifiche/91_dec_ruolo_segretario.csv</entry>
 <entry key="92">docs/Decodifiche/92_dec_difetto_eta_unioni_civili.csv</entry>
 <entry key="93">docs/Decodifiche/93_dec_tipo_notifica.csv</entry>
 <entry key="95">docs/Decodifiche/95_dec_soggetto_impedimento_civile.csv</entry>
 <entry key="96">docs/Decodifiche/96_dec_motivo_recupero.csv</entry>
 <entry key="97">docs/Decodifiche/97_dec_consolato.csv</entry>
+<entry key="98">docs/Decodifiche/98_dec_riconoscimento_sentenza.csv</entry>
 <entry key="100">docs/Decodifiche/100_dec_versione.csv</entry>
 <entry key="1_dec_tipo_evento">docs/Decodifiche/1_dec_tipo_evento.csv</entry>
 <entry key="2_dec_tipo_contenuto">docs/Decodifiche/2_dec_tipo_contenuto.csv</entry>
@@ -127,12 +129,14 @@
 <entry key="76_dec_tipo_mutazione">docs/Decodifiche/76_dec_tipo_mutazione.csv</entry>
 <entry key="78_dec_accertamento_nascita">docs/Decodifiche/78_dec_accertamento_nascita.csv</entry>
 <entry key="79_dec_tipo_rettifica">docs/Decodifiche/79_dec_tipo_rettifica.csv</entry>
+<entry key="88_dec_genitore_cittadinanza">docs/Decodifiche/88_dec_genitore_cittadinanza.csv</entry>
 <entry key="91_dec_ruolo_segretario">docs/Decodifiche/91_dec_ruolo_segretario.csv</entry>
 <entry key="92_dec_difetto_eta_unioni_civili">docs/Decodifiche/92_dec_difetto_eta_unioni_civili.csv</entry>
 <entry key="93_dec_tipo_notifica">docs/Decodifiche/93_dec_tipo_notifica.csv</entry>
 <entry key="95_dec_soggetto_impedimento_civile">docs/Decodifiche/95_dec_soggetto_impedimento_civile.csv</entry>
 <entry key="96_dec_motivo_recupero">docs/Decodifiche/96_dec_motivo_recupero.csv</entry>
 <entry key="97_dec_consolato">docs/Decodifiche/97_dec_consolato.csv</entry>
+<entry key="98_dec_riconoscimento_sentenza">docs/Decodifiche/98_dec_riconoscimento_sentenza.csv</entry>
 <entry key="100_dec_versione">docs/Decodifiche/100_dec_versione.csv</entry>
 <entry key="dec_accertamento_nascita">docs/Decodifiche/78_dec_accertamento_nascita.csv</entry>
 <entry key="dec_assistenza_minori">docs/Decodifiche/51_dec_assistenza_minori.csv</entry>
@@ -146,6 +150,7 @@
 <entry key="dec_esito_ricorso">docs/Decodifiche/75_dec_esito_ricorso.csv</entry>
 <entry key="dec_genere">docs/Decodifiche/5_dec_genere.csv</entry>
 <entry key="dec_genitore">docs/Decodifiche/40_dec_genitore.csv</entry>
+<entry key="dec_genitore_cittadinanza">docs/Decodifiche/88_dec_genitore_cittadinanza.csv</entry>
 <entry key="dec_grado_parentela">docs/Decodifiche/43_dec_grado_parentela.csv</entry>
 <entry key="dec_impedimento">docs/Decodifiche/48_dec_impedimento.csv</entry>
 <entry key="dec_indirizzo_comunicazione">docs/Decodifiche/56_dec_indirizzo_comunicazione.csv</entry>
@@ -160,6 +165,7 @@
 <entry key="dec_regime_patrimoniale">docs/Decodifiche/49_dec_regime_patrimoniale.csv</entry>
 <entry key="dec_richiedente_nascita">docs/Decodifiche/64_dec_richiedente_nascita.csv</entry>
 <entry key="dec_riconoscimento">docs/Decodifiche/42_dec_riconoscimento.csv</entry>
+<entry key="dec_riconoscimento_sentenza">docs/Decodifiche/98_dec_riconoscimento_sentenza.csv</entry>
 <entry key="dec_ruolo_operatore">docs/Decodifiche/67_dec_ruolo_operatore.csv</entry>
 <entry key="dec_ruolo_segretario">docs/Decodifiche/91_dec_ruolo_segretario.csv</entry>
 <entry key="dec_ruolo_usc">docs/Decodifiche/63_dec_ruolo_usc.csv</entry>
